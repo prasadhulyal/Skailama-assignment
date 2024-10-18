@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Reminder App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Authentication Section -->
+        <div id="auth-section">
+            <h2>Task Reminder App</h2>
+            <div id="sign-up" class="auth-form">
+                <h3>Sign Up</h3>
+                <input type="text" id="sign-up-username" placeholder="Username">
+                <input type="password" id="sign-up-password" placeholder="Password">
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+            
+            <div id="sign-in" class="auth-form">
+                <h3>Sign In</h3>
+                <input type="text" id="sign-in-username" placeholder="Username">
+                <input type="password" id="sign-in-password" placeholder="Password">
+                <button onclick="signIn()">Sign In</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="hidden">
+            <h2>Welcome <span id="username-display"></span></h2>
+            <button onclick="signOut()">Sign Out</button>
+
+            <!-- Task Creation -->
+            <div class="task-creation">
+                <input type="text" id="task-title" placeholder="Task Title">
+                <input type="datetime-local" id="task-due">
+                <button onclick="createTask()">Create Task</button>
+            </div>
+
+            <!-- Task List -->
+            <h3>Pending Tasks</h3>
+            <ul id="pending-tasks"></ul>
+
+            <h3>Completed Tasks</h3>
+            <ul id="completed-tasks"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
